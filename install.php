@@ -9,30 +9,20 @@
     </head>
     <body>
 
-<?php
-if (extension_loaded('zip'))
-{
-    $zip = new ZipArchive;
+        <?php
+        if (extension_loaded('zip')) {
+            $zip = new ZipArchive;
 
-    if ($zip->open('test.zip') === TRUE)
-    {
-        $zip->extractTo('./aaa/');
-        $zip->close();
-    }
-    else
-    {
-        echo 'Erreur ouverture fichier test.zip';
-    }
-}
-else
-{
-
-
-
-
-
-}
-?>
+            if ($zip->open('test.zip') === TRUE) {
+                $zip->extractTo('./aaa/');
+                $zip->close();
+            } else {
+                echo 'Erreur ouverture fichier test.zip';
+            }
+        } else {
+            
+        }
+        ?>
 
 
 

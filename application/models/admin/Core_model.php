@@ -1,18 +1,15 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Core_model extends CI_Model {
 
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
     }
 
-
-    public function get_file_install()
-    {     
-        if (file_exists('install.php'))
-        {
+    public function get_file_install() {
+        if (file_exists('install.php')) {
             $val = '<div class="row">';
             $val.= '<div class="col-md-12">';
             $val.= '<div class="alert alert-danger">';
@@ -25,4 +22,5 @@ class Core_model extends CI_Model {
             return $val;
         }
     }
+
 }
